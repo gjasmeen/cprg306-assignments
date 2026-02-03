@@ -43,11 +43,8 @@ export default function NewItem() {
                         onChange={(e) => setName(e.target.value)}
                         required
 
-
-                    
-                    
-
                     />
+                    {nametouched && (name.length < 2 || name === "") && (<p className="text-red-500">Name must have at least 2 characters</p>)}
                 </div>
 
                 <div>
