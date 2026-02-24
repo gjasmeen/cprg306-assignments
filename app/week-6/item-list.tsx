@@ -49,7 +49,7 @@ export function ItemList({items}: { items: ItemType[] }) {
           }}
           className={`px-3 py-1 rounded ${
             sortBy === "name" && !grouped
-              ? "bg-pink-500 text-white p-2 mx-2 rounded"
+              ? "bg-pink-600 text-white p-2 mx-2 rounded"
               : "bg-gray-200 p-2 mx-2 rounded"
           }`}
         >
@@ -63,7 +63,7 @@ export function ItemList({items}: { items: ItemType[] }) {
           }}
           className={`px-3 py-1 rounded ${
             sortBy === "category" && !grouped
-              ? "bg-pink-500 text-white p-2 mx-2 rounded"
+              ? "bg-pink-600 text-white p-2 mx-2 rounded"
               : "bg-gray-200 p-2 mx-2 rounded"
           }`}
         >
@@ -73,7 +73,7 @@ export function ItemList({items}: { items: ItemType[] }) {
         <button
           onClick={() => setGrouped(true)}
           className={`px-3 py-1 rounded ${
-            grouped ? "bg-pink-500 text-white p-2 mx-2 rounded" : "bg-gray-200 p-100 mx-2 rounded"
+            grouped ? "bg-pink-600 text-white p-2 mx-2 rounded" : "bg-gray-200 p-100 mx-2 rounded"
           }`}
         >
           Group by Category
