@@ -1,0 +1,16 @@
+interface ItemProps {
+    name: string;
+    quantity: number;   
+    category: string;
+}            
+
+function Item ({name, quantity, category}: ItemProps) {
+    return (
+    <div className= "text-center border border-pink-500 p-4 m-4 rounded-3xl bg-pink-100"  >
+       <p className="text-lg font-bold">{name}</p>
+       <p className ="text-sm">Category: {category}</p>
+       <p className="text-sm">Quantity: {quantity}</p>
+    </div>
+    );
+}
+export default Item;
