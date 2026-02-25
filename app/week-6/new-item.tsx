@@ -17,7 +17,7 @@ export default function NewItem({onAddItem}: { onAddItem: (item: any) => void })
         event.preventDefault();
         if (!name || name.length < 2) return;
         //alert("Please enter a valid name with at least 2 characters.");
-            const item = {name, quantity, category};    
+        const item = {name, quantity, category};    
         //weel 6 change
         onAddItem(item);
         console.log({item});
@@ -27,6 +27,7 @@ export default function NewItem({onAddItem}: { onAddItem: (item: any) => void })
         setName("");
         setQuantity(1);
         setCategory("produce")
+        setNameTouched(false);
     };
         return (
             <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto mt-8">
@@ -48,7 +49,7 @@ export default function NewItem({onAddItem}: { onAddItem: (item: any) => void })
                         required
 
                     />
-                    {nametouched && (name.length < 2 || name === "") && (<p className="text-red-500">Name must have at least 2 characters</p>)}
+                    {nametouched && (name.length < 2) && (<p className="text-red-500: text-color-grey">Name must have at least 2 characters </p>)}
                 </div>
 
                 <div>
