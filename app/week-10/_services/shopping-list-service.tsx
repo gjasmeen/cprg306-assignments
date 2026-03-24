@@ -7,14 +7,14 @@ export const getItems = async (userId: string) => {
             //, userId, "items");
         const itemsSnapshot = await getDocs(itemsCollection);
         //return itemsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    //return itemsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as { id: string; name: string; quantity: number; category:string }[];
+       //return itemsSnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() })) as { id: string; name: string; quantity: number; category:string }[];
        return itemsSnapshot.docs.map(doc=> {
         const item = doc.data() as any;
         return {
             id: doc.id,
-            name: item.name ?? " ",
-            quantity: item.quantity??0,
-            category: item.category??" ",
+            name: item.name ,
+            quantity: item.quantity,
+            category: item.category,
         }  });  
     } catch (error) {
         console.error("Error fetching items: ", error);
